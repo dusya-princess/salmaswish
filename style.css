@@ -1,0 +1,29 @@
+*{
+    padding:0;
+    margin: 0%;
+}
+
+body{
+    background: linear-gradient(135deg,#e6aee6,#acd9b9,#ff8cff,#ecece3);
+    background-size: 400% 400%;
+    animation: bg 10s ease infinite;
+    min-height: 100vh;
+}
+
+@keyframes bg{
+    0%{
+        background-position: 0% 50%;
+    }
+        50%{
+        background-position: 100% 50%;
+    }
+        100%{
+        background-position: 0% 50%;
+    }
+}
+
+h1{
+    font-size: 35px;
+    width: 100vw;
+    text-align: center;
+}
