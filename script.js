@@ -7,8 +7,3 @@ var imagelist=[
 ];
 
 
-const hammer=new hammer(document,body);
-hammer.on("swipeleft",()=>{
-    currentwish++;
-    document.getElementById("wish").innerHTML=imagelist[currentwish-1];
-});

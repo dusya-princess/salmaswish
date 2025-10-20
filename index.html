@@ -7,6 +7,7 @@
         wishes
     </title>
     <link rel="stylesheet" href="style.css">
+
     <script src="script.js"></script>
 </head>
 <body>
@@ -15,5 +16,24 @@
     <div class="imagecontainer">
         <img id="imgwish" src="images/Grand-Canal-Venice.webp" alt="">
     </div>
+     <script src="https://cdnjs.cloudflare.com/ajax/libs/hammer.js/2.0.8/hammer.min.js"></script>
+    <script>
+            
+            // Hammer.js для обработки свайпов
+            const hammer = new Hammer(document.body);
+
+            hammer.on('swipeleft', () => {
+                       currentwish++;
+    document.getElementById("wish").innerHTML=wishlist[currentwish-1];
+    console.log("ftfyrd")
+            });
+
+            hammer.on('swiperight', () => {
+                   currentwish--;
+    document.getElementById("wish").innerHTML=wishlist[currentwish-1];
+    console.log("ftfyrd")
+            });
+    </script>
+
 </body>
 </html>
