@@ -48,3 +48,22 @@ h1{
     margin-left: 15vw;
     margin-top: 10vh;
 }
+
+.snowflake{
+    position: absolute;
+    color: rgb(231, 242, 242);
+    animation: falldown linear forwards;
+    text-shadow: 0 0 5px blue;
+}
+
+@keyframes falldown {
+    to{
+        transform: translateY(100vh) rotate(360deg);
+    }
+}
+
+@keyframes wind {
+    to{
+        transform: translateX(100vw);
+    }
+}

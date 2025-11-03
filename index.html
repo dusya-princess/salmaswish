@@ -19,20 +19,21 @@
      <script src="https://cdnjs.cloudflare.com/ajax/libs/hammer.js/2.0.8/hammer.min.js"></script>
     <script>
             
-            // Hammer.js для обработки свайпов
+
             const hammer = new Hammer(document.body);
 
             hammer.on('swipeleft', () => {
                        currentwish++;
-    document.getElementById("wish").innerHTML=wishlist[currentwish-1];
-    console.log("ftfyrd")
+                       changewish();
+
             });
 
             hammer.on('swiperight', () => {
                    currentwish--;
-    document.getElementById("wish").innerHTML=wishlist[currentwish-1];
-    console.log("ftfyrd")
+                    changewish();
             });
+
+            
     </script>
 
 </body>
