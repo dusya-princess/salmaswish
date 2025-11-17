@@ -43,17 +43,24 @@ h1{
     margin-top: 15vh;
 }
 
-.imagecontainer img{
-    width: 70vw;
-    margin-left: 15vw;
+.imagecontainer {
+    width: 100vw;
+display: flex;
     margin-top: 10vh;
+    justify-content: center;
+}
+
+ #ghj img{
+    width: 70vw;
+    text-align: center;
+
 }
 
 .snowflake{
     position: absolute;
     color: rgb(231, 242, 242);
     animation: falldown linear forwards;
-    text-shadow: 0 0 5px blue;
+    text-shadow: 0 0 2px blue;
 }
 
 @keyframes falldown {
@@ -66,4 +73,19 @@ h1{
     to{
         transform: translateX(100vw);
     }
+}
+@media (max-height:500px){
+    .imagecontainer {
+        height: 150px;
+    }
+        .imagecontainer img {
+        height: 150px;
+        width: 350px;
+    }
+    
+ #ghj img{
+    width: 250px;
+    text-align: center;
+
+}
 }

@@ -1,9 +1,16 @@
 var currentwish=1;
 
-var wishlist=["travelling to Italy","To see Snow"];
+// добавить желания в список wishlist
+
+// добавить названия изображений к желаниям в список imagelist
+
+// снежинки (можешь поменять цвет, размер, текст щэдов)
+var wishlist=["travelling to Italy","To see Snow","visiting Disneyland","flying on an air balloon"];
 var imagelist=[
     'Grand-Canal-Venice.webp',
-    'snow.jpeg'
+    'snow.jpeg',
+    "disneyland.jpg",
+    "airballon.webp"
 
     
     

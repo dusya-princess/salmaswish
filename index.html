@@ -14,7 +14,9 @@
     <h1>My Wishes</h1>
     <div id="wish" class="titlewishes">travelling to Italy</div>
     <div class="imagecontainer">
+        <div id="ghj">
         <img id="imgwish" src="images/Grand-Canal-Venice.webp" alt="">
+    </div>
     </div>
      <script src="https://cdnjs.cloudflare.com/ajax/libs/hammer.js/2.0.8/hammer.min.js"></script>
     <script>
@@ -24,12 +26,18 @@
 
             hammer.on('swipeleft', () => {
                        currentwish++;
+                       if (currentwish>wishlist.length){
+                        currentwish=1;
+                       }
                        changewish();
 
             });
 
             hammer.on('swiperight', () => {
                    currentwish--;
+                   if (currentwish==0){
+                    currentwish=wishlist.length;
+                   }
                     changewish();
             });
 
