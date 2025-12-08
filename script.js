@@ -5,19 +5,23 @@ var currentwish=1;
 // добавить названия изображений к желаниям в список imagelist
 
 // снежинки (можешь поменять цвет, размер, текст щэдов)
-var wishlist=["travelling to Italy","To see Snow","visiting Disneyland","flying on an air balloon"];
+var wishlist=["Travelling to Italy","To see Snow","visiting Disneyland","Flying on an air balloon","Home theatre " ,"Visiting ice rink in moscow","Jewlery Box","minky blanket","Nice Candles","Home Swing"];
 var imagelist=[
     'Grand-Canal-Venice.webp',
     'snow.jpeg',
     "disneyland.jpg",
-    "airballon.webp"
-
-    
-    
+    "airballon.webp",
+    "home theatre.jpg",
+    "skating rink.png",
+    "jewlery box.png",
+    "minky blanket.avif",
+    "candles.jpeg",
+    "HOME SWING.webp",
 ];
 
 
 function changewish(){
+  //opacity
 
     document.getElementById("wish").innerHTML=wishlist[currentwish-1];
     document.getElementById("imgwish").src=`images/${imagelist[currentwish-1]}`;
@@ -46,3 +50,26 @@ function createsnowflake(){
 }
 
 setInterval(createsnowflake,100);
+
+
+function updatetiming(){
+    var newyeardate=new Date("January 1, 2026 00:00:00").getTime();
+    var currentdate=new Date().getTime();
+    var millisecond=newyeardate-currentdate;
+
+    if (millisecond<0){
+         document.getElementById('timing').innerHTML="Happy New Year";
+        return;
+    }
+    var daysleft=Math.floor(millisecond/(1000*60*60*24));
+    var hoursleft=Math.floor((millisecond%(1000*60*60*24))/(1000*60*60));
+    var minutesleft=Math.floor((millisecond%(1000*60*60))/(1000*60));
+    var secondsleft=Math.floor((millisecond%(1000*60))/(1000));
+    var text=`${daysleft} days <br> ${hoursleft}:${minutesleft}:${secondsleft}`;
+    var test='salma';
+    document.getElementById('timing').innerHTML=text;
+
+}
+
+updatetiming();
+setInterval(updatetiming, 1000);

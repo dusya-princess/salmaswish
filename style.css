@@ -15,6 +15,7 @@ body{
     animation: bg 10s ease infinite;
     min-height: 100vh;
     font-family: italicfont,sans-serif;
+    overflow: hidden;
 }
 
 @keyframes bg{
@@ -51,17 +52,30 @@ display: flex;
 }
 
  #ghj img{
-    width: 70vw;
+    height: 50vh;
+    width: auto;
+    object-fit: contain;
     text-align: center;
 
 }
 
 .snowflake{
     position: absolute;
-    color: rgb(231, 242, 242);
+    color: rgb(226, 230, 230);
     animation: falldown linear forwards;
     text-shadow: 0 0 2px blue;
 }
+
+
+#timing{
+    width: 100vw;
+    text-align: center;
+    font-size: 2em;
+    position:absolute;
+    bottom: 8vh;
+    text-shadow: 0 0 10px springgreen;
+}
+
 
 @keyframes falldown {
     to{
@@ -86,6 +100,14 @@ display: flex;
  #ghj img{
     width: 250px;
     text-align: center;
+
+}
+}
+
+@media (min-width:1000px){
+     #ghj img{
+    width: 40vw;
+
 
 }
 }
